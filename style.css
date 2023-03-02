@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: #fff;
+    width: 30%;
+    height: 40%;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #aaa;
+    display: flex;
+    transition: 250ms;
+}
+
+img{
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    background: linear-gradient(90deg, #05F26C, #527AF2,#5F49F2,#B225D9,#F2220F,#F2A007);
+    filter: blur(25px);
+    opacity: 0;
+    transition: 250ms;
+}
+
+.card:hover{
+    margin-bottom: 20px;
+}
+
+.card:hover::before{
+    opacity: 1;
+}
